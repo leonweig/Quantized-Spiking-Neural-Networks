@@ -18,21 +18,22 @@ X_test.txt
 y_test.txt
 
 ## Install
-```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
 
 ## RUN (everything)
 
-python -m snnhar.cli run-all --config configs/default.yaml
+PYTHONPATH=src python -m snnhar.cli --config configs/default.yaml run-all
 
 ## RUN (examples)
-python -m snnhar.cli train-snn --config configs/default.yaml --encoding rate --T 20 --epochs 15
-python -m snnhar.cli sweep-timesteps --config configs/default.yaml
-python -m snnhar.cli sweep-encodings --config configs/default.yaml
-python -m snnhar.cli train-ann --config configs/default.yaml --epochs 15
+PYTHONPATH=src python -m snnhar.cli --config configs/default.yaml train-snn --encoding rate --T 20 --epochs 15
+PYTHONPATH=src python -m snnhar.cli --config configs/default.yaml sweep-timesteps
+PYTHONPATH=src python -m snnhar.cli --config configs/default.yaml sweep-encodings
+PYTHONPATH=src python -m snnhar.cli --config configs/default.yaml train-ann --epochs 15
+
 
 ## Outputs
 Saved under:
