@@ -12,10 +12,10 @@ End-to-end pipeline for Human Activity Recognition:
 ## Dataset
 Expected files (561-feature text format):
 UCI_HAR_Dataset/
-X_train.txt
-y_train.txt
-X_test.txt
-y_test.txt
+X_train.txt <br/>
+y_train.txt <br/>
+X_test.txt <br/>
+y_test.txt <br/>
 
 ## Install
 python -m venv .venv
