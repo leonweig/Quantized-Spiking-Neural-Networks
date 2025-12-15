@@ -11,7 +11,7 @@ End-to-end pipeline for Human Activity Recognition:
 
 ## Dataset
 Expected files (561-feature text format):
-UCI_HAR_Dataset/
+UCI_HAR_Dataset/ <br/>
 X_train.txt <br/>
 y_train.txt <br/>
 X_test.txt <br/>
